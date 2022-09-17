@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapNetClone.Web", "SapNetClone.Web\SapNetClone.Web.csproj", "{02A787F4-F49A-47A1-97DD-02C6FC5C19A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapNetClone.DataAccess", "SapNetClone.DataAccess\SapNetClone.DataAccess.csproj", "{8CBE9181-B6DD-49AE-B783-60C9F8C5A031}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapNetCore.Business", "SapNetCore.Business\SapNetCore.Business.csproj", "{DAD8D8F4-C341-42CA-B57D-43ADBA75080F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapNetClone.Entities", "SapNetClone.Entities\SapNetClone.Entities.csproj", "{A11BD691-429B-475E-B13E-F897EDD55A86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapNetClone.Core", "SapNetClone.Core\SapNetClone.Core.csproj", "{EE5136C3-EDBC-40C1-A139-68A2EC04EB61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapNetClone.Api", "SapNetClone.Api\SapNetClone.Api.csproj", "{515B476C-BCC4-4080-A963-D3CA6BA8B327}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02A787F4-F49A-47A1-97DD-02C6FC5C19A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02A787F4-F49A-47A1-97DD-02C6FC5C19A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02A787F4-F49A-47A1-97DD-02C6FC5C19A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02A787F4-F49A-47A1-97DD-02C6FC5C19A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CBE9181-B6DD-49AE-B783-60C9F8C5A031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CBE9181-B6DD-49AE-B783-60C9F8C5A031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CBE9181-B6DD-49AE-B783-60C9F8C5A031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CBE9181-B6DD-49AE-B783-60C9F8C5A031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAD8D8F4-C341-42CA-B57D-43ADBA75080F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD8D8F4-C341-42CA-B57D-43ADBA75080F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD8D8F4-C341-42CA-B57D-43ADBA75080F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD8D8F4-C341-42CA-B57D-43ADBA75080F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A11BD691-429B-475E-B13E-F897EDD55A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A11BD691-429B-475E-B13E-F897EDD55A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A11BD691-429B-475E-B13E-F897EDD55A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A11BD691-429B-475E-B13E-F897EDD55A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE5136C3-EDBC-40C1-A139-68A2EC04EB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5136C3-EDBC-40C1-A139-68A2EC04EB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5136C3-EDBC-40C1-A139-68A2EC04EB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5136C3-EDBC-40C1-A139-68A2EC04EB61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{515B476C-BCC4-4080-A963-D3CA6BA8B327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{515B476C-BCC4-4080-A963-D3CA6BA8B327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{515B476C-BCC4-4080-A963-D3CA6BA8B327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{515B476C-BCC4-4080-A963-D3CA6BA8B327}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
