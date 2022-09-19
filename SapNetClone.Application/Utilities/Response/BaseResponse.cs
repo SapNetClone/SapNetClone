@@ -1,4 +1,4 @@
-namespace SapNetClone.Core.Utilities.Response;
+namespace SapNetClone.Application.Utilities.Response;
 
 public class BaseResponse<T> where T : class
 {

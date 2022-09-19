@@ -17,7 +17,7 @@ public class DataContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);
-        optionsBuilder.UseSqlServer("Server=localhost;Database=SapNetClone;User=sa;Password=MyPass@word;");
+       // optionsBuilder.UseSqlServer("Server=localhost;Database=SapNetClone;User=sa;Password=MyPass@word;");
     }
 
     #region DbSet
