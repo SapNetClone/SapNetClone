@@ -10,6 +10,6 @@ namespace SapNetClone.Application.Abstract.Repositories
 {
     public interface IRepository<T> where T : BaseObject
     {
-        DbSet<T> Table { get; }
+        DbSet<T> DataTable { get; }
     }
 }

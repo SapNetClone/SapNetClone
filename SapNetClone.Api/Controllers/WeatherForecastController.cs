@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using SapNetClone.Application.Abstract.Repositories.UsersRepository;
 
 namespace SapNetClone.Api.Controllers;
 
@@ -11,22 +12,23 @@ public class WeatherForecastController : ControllerBase
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-    private readonly ILogger<WeatherForecastController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    private readonly ILogger<WeatherForecastController> _logger;
+    private readonly IUserReadRepository _userReadRepository;
+
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, IUserReadRepository userReadRepository)
     {
         _logger = logger;
+        _userReadRepository = userReadRepository;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+
+    
+
+    [HttpGet]
+    public ActionResult Get()
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+        var data = _userReadRepository.GetAll().ToList();
+        return Ok(data);
     }
 }
