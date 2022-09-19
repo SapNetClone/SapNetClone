@@ -1,7 +1,12 @@
+using SapNetClone.Application.Abstract.Repositories;
+using SapNetClone.Application.Abstract.Repositories.UsersRepository;
+using SapNetCore.Persistance.Concrete.Repository.UserRepository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IUserReadRepository, UserReadRepository>();
 
 var app = builder.Build();
 
