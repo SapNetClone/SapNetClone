@@ -1,5 +1,5 @@
 using SapNetClone.Application.Abstract.Repositories.UsersRepository;
-using SapNetClone.DataAccess.Context;
+using SapNetClone.Context;
 using SapNetClone.Entities.Classes.UsersClasses;
 
 namespace SapNetCore.Persistance.Concrete.Repository.UserRepository;

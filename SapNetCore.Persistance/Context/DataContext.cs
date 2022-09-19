@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SapNetClone.Entities.Classes.UsersClasses;
 
-namespace SapNetClone.DataAccess.Context;
+namespace SapNetClone.Context;
 
 public class DataContext : DbContext
 {
@@ -15,11 +15,11 @@ public class DataContext : DbContext
         
     }
     
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        base.OnConfiguring(optionsBuilder);
-        optionsBuilder.UseSqlServer("Server=localhost;Database=SapNetClone;User=sa;Password=MyPass@word;");
-    }
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //{
+    //    base.OnConfiguring(optionsBuilder);
+    //    optionsBuilder.UseSqlServer("Server=TEDESCO420\\SQL2019;Database=SAPNet;User Id=sa;Password=qwerr112358;");
+    //}
 
     #region DbSet
 
