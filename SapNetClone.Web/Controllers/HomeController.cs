@@ -1,8 +1,8 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using SapNetClone.Application.Abstract.Repositories.UsersRepository;
-using SapNetClone.Application.Features.Commands.User.GetAllUser;
+using SapNetClone.Application.Features.User.GetAllUser;
 using SapNetClone.Application.ViewModels.Users;
 using SapNetClone.Web.Models;
 
