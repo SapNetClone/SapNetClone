@@ -8,16 +8,16 @@ namespace SapNetClone.Web.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    
+
     private readonly IUserReadRepository _userReadRepository;
 
-    
+
     public HomeController(ILogger<HomeController> logger, IUserReadRepository userReadRepository)
     {
         _logger = logger;
         _userReadRepository = userReadRepository;
     }
-[HttpGet]
+    [HttpGet]
     public IActionResult Index()
     {
         var data = _userReadRepository.GetAll().ToList();
