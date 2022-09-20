@@ -11,18 +11,17 @@ public class BaseObject
     public int Id { get; set; }
 
     [ScaffoldColumn(false)]
-    [DisplayFormat(DataFormatString = "{00:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
-    public DateTime CreateOn { get; set; }
+    public DateTime CreatedDate { get; set; }
     
     [Browsable(false)]
     [ScaffoldColumn(false)]
-    public int CreateById { get; set; }
+    public int? CreateById { get; set; }
     
     [DefaultValue(0)]
-    public int UpdateById { get; set; }
+    public int? UpdateById { get; set; }
 
     public DateTime? LastModifiedOn { get; set; }
-    public string LastModifiedName { get; set; }
+    public string? LastModifiedName { get; set; }
     
     [DisplayName("Aktif")]
     public bool Active { get; set; }
@@ -31,5 +30,5 @@ public class BaseObject
     public string IsActiveString => Active ? "Aktif" : "Pasif";
 
     [ScaffoldColumn(false)]
-    public bool IsDeleted { get; set; }
+    public bool? IsDeleted { get; set; }
 }

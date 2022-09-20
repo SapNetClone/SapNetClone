@@ -1,8 +1,8 @@
-using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using SapNetClone.Application.Abstract.Repositories;
-using SapNetClone.DataAccess.Context;
+using SapNetClone.Context;
 using SapNetClone.Entities.Classes.BaseClasses;
+using System.Linq.Expressions;
 
 namespace SapNetCore.Persistance.Concrete.Repository;
 
@@ -21,25 +21,21 @@ public class ReadRepository<T> : IReadRepository<T> where T : BaseObject
     {
         var data = DataTable.AsQueryable();
         return data;
-
     }
-
     public IQueryable<T> GetWhere(Expression<Func<T, bool>> expression)
     {
-        throw new NotImplementedException();
+        return DataTable.Where(expression);
     }
-
-    public Task<T> GetSingleAsync(Expression<Func<T, bool>> expression)
+    #region Async functions 
+    public async Task<T> GetSingleAsync(Expression<Func<T, bool>> expression)
     {
-        throw new NotImplementedException();
+        return await DataTable.FindAsync(expression);
     }
 
-    public Task<T> GetByIdAsync(int id)
+    public async Task<T> GetByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        return await DataTable.FindAsync(id);
     }
-
-    #region Async
 
     #endregion
 }
