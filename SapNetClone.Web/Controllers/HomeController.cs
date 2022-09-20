@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using SapNetClone.Application.Abstract.Repositories.UsersRepository;
 using SapNetClone.Web.Models;
 
 namespace SapNetClone.Web.Controllers;
@@ -7,15 +8,20 @@ namespace SapNetClone.Web.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    
+    private readonly IUserReadRepository _userReadRepository;
 
-    public HomeController(ILogger<HomeController> logger)
+    
+    public HomeController(ILogger<HomeController> logger, IUserReadRepository userReadRepository)
     {
         _logger = logger;
+        _userReadRepository = userReadRepository;
     }
-
+[HttpGet]
     public IActionResult Index()
     {
-        return View();
+        var data = _userReadRepository.GetAll().ToList();
+        return Ok(data);
     }
 
     public IActionResult Privacy()
