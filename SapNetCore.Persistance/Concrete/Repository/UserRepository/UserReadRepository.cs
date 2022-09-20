@@ -6,7 +6,10 @@ namespace SapNetCore.Persistance.Concrete.Repository.UserRepository;
 
 public class UserReadRepository : ReadRepository<User> , IUserReadRepository
 {
+   
     public UserReadRepository(DataContext context) : base(context)
     {
+
+       
     }
 }

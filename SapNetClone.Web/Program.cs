@@ -1,12 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using SapNetClone.Application;
 using SapNetClone.Application.Abstract.Repositories;
 using SapNetClone.Application.Abstract.Repositories.UsersRepository;
+using SapNetClone.Context;
+using SapNetCore.Persistance;
 using SapNetCore.Persistance.Concrete.Repository.UserRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<DataContext>(config => config.UseSqlServer(ConnectionStringConfiguration.connectionString));
+builder.Services.AddPersistenceServices();
+builder.Services.AddApplicationServices();
 
 var app = builder.Build();
 

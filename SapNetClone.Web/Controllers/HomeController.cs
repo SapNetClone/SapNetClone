@@ -1,6 +1,9 @@
 ﻿using System.Diagnostics;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using SapNetClone.Application.Abstract.Repositories.UsersRepository;
+using SapNetClone.Application.Features.Commands.User.GetAllUser;
+using SapNetClone.Application.ViewModels.Users;
 using SapNetClone.Web.Models;
 
 namespace SapNetClone.Web.Controllers;
@@ -8,20 +11,21 @@ namespace SapNetClone.Web.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    
     private readonly IUserReadRepository _userReadRepository;
+    readonly IMediator _mediator;
 
-    
-    public HomeController(ILogger<HomeController> logger, IUserReadRepository userReadRepository)
+
+    public HomeController(ILogger<HomeController> logger, IUserReadRepository userReadRepository, IMediator mediator)
     {
         _logger = logger;
         _userReadRepository = userReadRepository;
+        _mediator = mediator;
     }
-[HttpGet]
-    public IActionResult Index()
+    [HttpGet]
+    public async Task<IActionResult> Index(GetAllUserQueryRequest request)
     {
-        var data = _userReadRepository.GetAll().ToList();
-        return Ok(data);
+        var response = await _mediator.Send(request);  
+        return View(response.UserVMs.ToList());
     }
 
     public IActionResult Privacy()

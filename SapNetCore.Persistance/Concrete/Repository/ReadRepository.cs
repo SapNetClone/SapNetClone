@@ -9,7 +9,6 @@ namespace SapNetCore.Persistance.Concrete.Repository;
 public class ReadRepository<T> : IReadRepository<T> where T : BaseObject
 {
     private readonly DataContext _context;
-
     public ReadRepository(DataContext context)
     {
         _context = context;

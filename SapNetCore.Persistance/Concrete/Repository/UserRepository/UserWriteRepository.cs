@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 namespace SapNetCore.Persistance.Concrete.Repository.UserRepository
 {
     public class UserWriteRepository : WriteRepository<User>, IUserWriteRepository
-    {
-        public UserWriteRepository(DataContext context) : base(context)
+    {        public UserWriteRepository(DataContext context) : base(context)
         {
+
         }
     }
 }
