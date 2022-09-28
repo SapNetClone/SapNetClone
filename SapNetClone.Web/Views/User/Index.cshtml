@@ -27,6 +27,44 @@
                             @Html.DisplayNameFor(model => model.TelephoneNumber)
                         </th>
 
+<<<<<<< HEAD
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							var id = item.Id;
+							<tr id="@id">
+								<td>
+									<a class="btn btn-secondary" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+									<a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+									<button class="btn btn-danger" id="deleteButton" onclick="openDeleteDialog('@id')">Delete</button>
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem=>item.SocialSecurityCode)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem=> item.Name)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem=>item.Email)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem=>item.Email)
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+@section Scripts {
+
+	}
+=======
                     </tr>
                     </thead>
                     <tbody>
@@ -63,3 +101,4 @@
 @section Scripts {
 
 }
+>>>>>>> 52909b1aaf6810b34ca7574f58ac924601999b0b
