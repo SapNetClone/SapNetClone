@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using SapNetClone.Entities.Classes.Product;
 using SapNetClone.Entities.Classes.UsersClasses;
 
 namespace SapNetClone.Context;
@@ -24,6 +25,7 @@ public class DataContext : DbContext
     #region DbSet
 
     public DbSet<User> User { get; set; }
+    public DbSet<Product> Product { get; set; }
 
     #endregion
 }
