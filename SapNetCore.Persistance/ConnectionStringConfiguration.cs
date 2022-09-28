@@ -8,11 +8,11 @@ namespace SapNetCore.Persistance
 {
    public static class ConnectionStringConfiguration
     {
-        static public string connectionString
+        static public string ConnectionString
         {
             get
             {
-                return "Server=TEDESCO420\\SQL2019;Database=SAPNet;User Id=sa;Password=qwerr112358;";
+                return "Server=localhost;Database=SapNetCloneV1;User=sa;Password=MyPass@word;";
             }
 
         }
