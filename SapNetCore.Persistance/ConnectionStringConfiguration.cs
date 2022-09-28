@@ -8,7 +8,7 @@ namespace SapNetCore.Persistance
 {
    public static class ConnectionStringConfiguration
     {
-        static public string connectionString
+        static public string ConnectionString
         {
             get
             {

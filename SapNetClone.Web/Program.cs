@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<DataContext>(config => config.UseSqlServer(ConnectionStringConfiguration.connectionString));
+builder.Services.AddDbContext<DataContext>(config => config.UseSqlServer(ConnectionStringConfiguration.ConnectionString));
 builder.Services.AddPersistenceServices();
 
 
