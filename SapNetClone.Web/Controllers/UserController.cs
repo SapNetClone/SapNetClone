@@ -39,5 +39,15 @@ namespace SapNetClone.Web.Controllers
             //await userWriteRepository.SaveAsync();
             return Ok("Error");
         }
+
+        public IActionResult Detail()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IActionResult Edit()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
