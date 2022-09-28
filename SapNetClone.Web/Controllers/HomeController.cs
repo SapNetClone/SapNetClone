@@ -20,8 +20,7 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Index()
     {
-        var data = _userReadRepository.GetAll().ToList();
-        return Ok(data);
+        return View();
     }
 
     public IActionResult Privacy()
