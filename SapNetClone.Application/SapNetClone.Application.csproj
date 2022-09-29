@@ -22,6 +22,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\SapNetClone.Entities\SapNetClone.Entities.csproj" />
+      <ProjectReference Include="..\SapNetClone.Infrastructure\SapNetClone.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

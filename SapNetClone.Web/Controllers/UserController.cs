@@ -6,17 +6,17 @@ namespace SapNetClone.Web.Controllers
 {
     public class UserController : Controller
     {
-        readonly IUserReadRepository userReadRepository;
-        readonly IUserWriteRepository userWriteRepository;
+        readonly IUserReadRepository _userReadRepository;
+        readonly IUserWriteRepository _userWriteRepository;
         public UserController(IUserReadRepository userReadRepository,IUserWriteRepository userWriteRepository)
         {
-            this.userReadRepository = userReadRepository;
-            this.userWriteRepository = userWriteRepository;
+            this._userReadRepository = userReadRepository;
+            this._userWriteRepository = userWriteRepository;
         }
         [HttpGet]
         public IActionResult Index()
         {
-            var data = userReadRepository.GetAll().Select(user => new ListUserVM()
+            var data = _userReadRepository.GetAll().Select(user => new ListUserVM()
             {
                 Id = user.Id,
                 Name = user.Name,
@@ -31,7 +31,7 @@ namespace SapNetClone.Web.Controllers
       
         public async Task<IActionResult> Delete(int id)
         {
-            var result = await userWriteRepository.Remove(id);
+            var result = await _userWriteRepository.Remove(id);
             if (result)
             {
                 return Ok("Success");
