@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SapNetClone.DataAccess.Helpers;
 
-public class RequiredGreaterThanZero : ValidationAttribute
+public class RequiredGreaterThanZero : ValidationAttribute // overrided
 {
     /// <summary>
     /// Designed for dropdowns to ensure that a selection is valid and not the dummy "SELECT" entry
@@ -15,7 +15,7 @@ public class RequiredGreaterThanZero : ValidationAttribute
         // value = Math.Round((decimal)value, 2, MidpointRounding.AwayFromZero);
         //  var a = string.Format("{0:0.00}", value);
         // return true if value is a non-null number > 0, otherwise return false
-        int i;
-        return value != null && int.TryParse(value.ToString(), out i) && i > 0;
+        decimal i;
+        return value != null && decimal.TryParse(value.ToString(), out i) && i > 0;
     }
 }

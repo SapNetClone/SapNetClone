@@ -40,14 +40,16 @@ namespace SapNetClone.Web.Controllers
             return Ok("Error");
         }
 
-        public IActionResult Detail()
+        [HttpGet]
+        public async Task<IActionResult> Detail(int id)
         {
-            throw new NotImplementedException();
+            return View();
         }
 
-        public IActionResult Edit()
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
         {
-            throw new NotImplementedException();
+            return View();
         }
 
         [HttpGet]
@@ -65,7 +67,6 @@ namespace SapNetClone.Web.Controllers
             }
 
             Product _product = new();
-            _product.CreatedDate = DateTime.Now;
             _product.Name = productVM.Name;
             _product.Description = productVM.Description;
             _product.Price = productVM.Price;
@@ -73,7 +74,7 @@ namespace SapNetClone.Web.Controllers
 
             await _productWriteRepository.AddAsync(_product);
             await _productWriteRepository.SaveAsync();
-            
+
             return RedirectToAction("Index");
         }
     }

@@ -6,5 +6,5 @@ public class Product : BaseObject
 {
     public string? Name { get; set; }
     public string? Description { get; set; }
-    public string Price { get; set; }
+    public double Price { get; set; }
 }

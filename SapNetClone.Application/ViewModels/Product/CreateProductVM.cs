@@ -9,6 +9,6 @@ public class CreateProductVM
     public string Name { get; set; }
     [Required] 
     public string Description { get; set; }
-    [RequiredGreaterThanZero] 
-    public string Price { get; set; }
+    [RequiredGreaterThanZero]
+    public double Price { get; set; }
 }
