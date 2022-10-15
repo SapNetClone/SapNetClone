@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace SapNetCore.Persistance
 {
    public static class ConnectionStringConfiguration
@@ -12,7 +7,7 @@ namespace SapNetCore.Persistance
         {
             get
             {
-                return "Server=localhost;Database=SapNetCloneV1;User=sa;Password=MyPass@word;";
+                return "Server=sql.bsite.net\\MSSQL2016;Database=erhanozgan_SAP;User=erhanozgan_SAP;Password=parcalasd1Q;";
             }
 
         }
