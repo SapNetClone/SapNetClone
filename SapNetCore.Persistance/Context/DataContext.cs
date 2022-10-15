@@ -16,11 +16,11 @@ public class DataContext : DbContext
         
     }
     
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        base.OnConfiguring(optionsBuilder);
-        optionsBuilder.UseSqlServer("Server=sql.bsite.net\\MSSQL2016;Database=erhanozgan_SAP;User=erhanozgan_SAP;Password=parcalasd1Q;");
-    }
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //{
+    //    base.OnConfiguring(optionsBuilder);
+    //    optionsBuilder.UseSqlServer("Server=TEDESCO420\\SQL2019;Database=SAPNet;User Id=sa;Password=qwerr112358;");
+    //}
 
     #region DbSet
 

@@ -28,8 +28,7 @@ public class WriteRepository<T> : IWriteRepository<T> where T : BaseObject
     }
     public bool Update(T entity)
     {
-        EntityEntry entityEntry = DataTable.Update(entity);  //ilgili veri context uzerinden gelmiyorsa yani tracking edilmiyorsa kullanilir. ??
-                                                             //await SaveAsync();
+        EntityEntry entityEntry = DataTable.Update(entity);  //await SaveAsync();
         return entityEntry.State == EntityState.Modified;
     }
     public Task<int> SaveAsync()

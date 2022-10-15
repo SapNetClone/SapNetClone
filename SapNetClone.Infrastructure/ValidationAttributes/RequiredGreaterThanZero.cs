@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SapNetClone.DataAccess.Helpers;
 
-public class RequiredGreaterThanZero : ValidationAttribute
+public class RequiredGreaterThanZero : ValidationAttribute // overrided
 {
     /// <summary>
     /// Designed for dropdowns to ensure that a selection is valid and not the dummy "SELECT" entry
